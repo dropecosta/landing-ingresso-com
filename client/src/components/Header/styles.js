@@ -19,6 +19,7 @@ export const Container = styled.div`
 export const Filters = styled.div`
   width: 320px;
   display: flex;
+  margin-right: 15px;
   align-items: center;
   justify-content: space-around;
 
@@ -47,20 +48,18 @@ export const Filters = styled.div`
     font-size: 14px;
     position: relative;
     z-index: 2;
+  }
+  
+  select.location{
+    height: 38px;
 
     option {
-      background: ${colors.ORANGE};
-      color: ${colors.BLACK};
-      &:focus{
+      background: ${colors.BLACK};
+      color: ${colors.ORANGE};
+      &:hover {
         background: ${colors.BLACK};
         color: ${colors.ORANGE};
       }
     }
-    option(:first) {
-      color: ${colors.ORANGE};
-    }
-  }
-  select{
-    padding: 1.1rem 0.7rem;
   }
 `;

@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/img/logo.svg';
 
-
-
 interface IProps {
   setLocation: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -24,7 +22,7 @@ const Header: React.FC<IProps> = ({setLocation}) => {
             <input type="text" placeholder="busca" />
           </div>
           <div>
-            <select defaultValue="São Paulo" onChange={handleChange}>
+            <select defaultValue="São Paulo" onChange={handleChange} className="location">
               <option value="">Localidade...</option>
               <option>São Paulo</option>
               <option>Rio de Janeiro</option>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"
+import Axios from "axios";
+import api, { endpoint } from './sevices/api'
 import Header from "./components/Header";
 import MovieContainer from "./components/MovieContainer";
 import IMovie, { IResponse } from "./Models";
@@ -10,10 +11,10 @@ const App: React.FC<object> = () => {
 
   const getMovies = async () => {
     const cartRegion = location === "São Paulo" ? 
-      "http://localhost:3000/movies/sp" : 
-      "http://localhost:3000/movies/rj";
-
-    const response = await axios.get(cartRegion);
+      `http://${endpoint}/movies/sp` : 
+      `http://${endpoint}/movies/rj`;
+      
+    const response = await api.get(cartRegion);
     const responseData = response.data;
     setResults(responseData);
   };
