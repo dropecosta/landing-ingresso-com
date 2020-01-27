@@ -1,0 +1,13 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+      ["module-resolver", {
+        "cwd": "babelrc",
+        "root": ["./src"],
+        "extensions": [".tsx"],
+        "paths": {
+            "*": ["src/*"]
+           }
+      }]
+    ]
+  }
