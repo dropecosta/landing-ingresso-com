@@ -21,6 +21,7 @@ const MovieContainer: React.FC<IProps> = ({ results, selectedLocation }) => {
           return (
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href={ result.trailers.length > 0 ? result.trailers[0].url : result.siteURL }
               key={result.id}
             >

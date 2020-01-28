@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
 import api, { endpoint } from './sevices/api'
 import Header from "./components/Header";
 import MovieContainer from "./components/MovieContainer";
@@ -8,6 +7,7 @@ import IMovie, { IResponse } from "./Models";
 const App: React.FC<object> = () => {
   const [results, setResults] = useState<IMovie[]>([]);
   const [location, setLocation] = useState<string>("São Paulo");
+  const [search, setSearch] = useState<string>("");
 
   const getMovies = async () => {
     const cartRegion = location === "São Paulo" ? 
@@ -17,13 +17,22 @@ const App: React.FC<object> = () => {
     const response = await api.get(cartRegion);
     const responseData = response.data;
     setResults(responseData);
+
+    if (search !== "") {
+      const searchResponse = responseData.filter((response: IResponse) =>
+        response.event.title.toUpperCase().includes(search.toUpperCase())
+      );
+      setResults(searchResponse);
+    } else {
+      setResults(responseData);
+    }
   };
 
   useEffect(() => {
     getMovies();
-  }, [location]);
+  }, [location, search]);
 
-  const cartProps = { setLocation };
+  const cartProps = { setLocation, setSearch };
 
   return(
     <>

@@ -6,9 +6,10 @@ import logo from '../../assets/img/logo.svg';
 
 interface IProps {
   setLocation: React.Dispatch<React.SetStateAction<string>>;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Header: React.FC<IProps> = ({setLocation}) => {
+const Header: React.FC<IProps> = ({ setLocation, setSearch }) => {
   function handleChange(event: any) {
     setLocation(event.target.value);
   }
@@ -19,7 +20,7 @@ const Header: React.FC<IProps> = ({setLocation}) => {
         <Filters>
           <div> 
             <FontAwesomeIcon icon={faSearch} className="icon" />
-            <input type="text" placeholder="busca" />
+            <input type="text" placeholder="busca" onChange={event => setSearch(event.target.value)} />
           </div>
           <div>
             <select defaultValue="São Paulo" onChange={handleChange} className="location">
