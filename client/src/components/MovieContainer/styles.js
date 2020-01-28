@@ -3,7 +3,7 @@ import * as colors from '../../assets/variables';
 
 export const Container = styled.div`
   height: 100%;
-  margin: 1.875rem 0.9375rem 0;
+  margin-top: 1.875rem;
 `;
 
 export const Label = styled.div`
@@ -52,13 +52,13 @@ export const Title = styled.div`
   span {
     margin-top: 0.625rem;
     font-size: 0.875rem;
-    font: 'Titillium Web';
+    font-family: 'Titillium Web', sans-serif;
     color: ${colors.WHITE};
     font-weight: bold;
     line-height: 1.125rem;
-    text-shadow: 0 0.25rem 0.1875rem #${colors.BLACK},
-                 0 0.5rem 0.8125rem #${colors.BLACK},
-                 0 1.125rem 1.4375rem #${colors.BLACK};
+    text-shadow: 0 0.25rem 0.1875rem ${colors.BLACK},
+                 0 0.5rem 0.8125rem ${colors.BLACK},
+                 0 1.125rem 1.4375rem ${colors.BLACK};
   }
 `;
 
@@ -78,6 +78,8 @@ export const Movie = styled.div`
     img {
       width: 100%;
       aspect-ratio: 1;
+      transform: scale(1.035);
+      transition: transform 0.5s;
     }
 
     div {
@@ -86,24 +88,30 @@ export const Movie = styled.div`
       position: absolute;
       bottom: 3.125rem;
       left: 0;
-      box-shadow: inset -0.875rem -3.3125rem 0.8125rem 0.1875rem rgba(0, 0, 0, 0.5);
       padding: 0.3125rem;
-
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
 
       span {
-        padding: 0.35rem 0.5rem;
-        background-color: ${colors.ORANGE};
-        text-transform: uppercase;
-        color: ${colors.GREY};
         width: 3.75rem;
-        font-size: 0.75rem;
         text-align: center;
         margin-top: 0.3125rem;
         margin-left: 0.3125rem;
+        padding: 0.35rem 0.5rem;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        background-color: ${colors.ORANGE};
+        color: ${colors.BLACK};
       }
+    }
+  }
+
+  div:hover {
+    img {
+      transform: scale(1.2);
+      cursor: pointer;
     }
   }
 `;
