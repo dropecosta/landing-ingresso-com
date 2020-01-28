@@ -21,5 +21,5 @@ npm start
 
 ## Meta
 
-Seu Nome – [@dropecosta](https://twitter.com/dropecosta) – dropecosta@gmail.com
+Pedro Antonio Costa Reis – [@dropecosta](https://twitter.com/dropecosta) – dropecosta@gmail.com
 [https://github.com/dropecosta](https://github.com/dropecosta)
