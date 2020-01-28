@@ -3,31 +3,31 @@ import * as colors from '../../assets/variables';
 
 export const Container = styled.div`
   height: 100%;
-  margin: 30px 15px 0;
+  margin: 1.875rem 0.9375rem 0;
 `;
 
 export const Label = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   justify-content: flex-start;
   text-transform: uppercase;
   align-items: baseline;
 
   h2 {
     color: ${colors.WHITE};
-    font-family: 'Titillium Web';
-    font-size: 20px;
-    margin-right: 15px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.25rem;
+    margin-right: 0.9375rem;
   }
 
   span {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${colors.BLACK};
-    font-family: 'Titillium Web';
+    font-family: 'Titillium Web', sans-serif;
     padding: 0.02rem 0.5rem;
-    border: 1px solid ${colors.ORANGE};
+    border: 0.0625rem solid ${colors.ORANGE};
     color: ${colors.ORANGE};
-    height: 18px;
+    height: 1.125rem;
   }
 `;
 
@@ -45,27 +45,27 @@ export const MovieRail = styled.div`
 
 export const Title = styled.div`
   position: relative;
-  bottom: 55px;
-  left: 10px;
+  bottom: 3.4375rem;
+  left: 0.625rem;
   display: flex;
 
   span {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
     font: 'Titillium Web';
     color: ${colors.WHITE};
     font-weight: bold;
-    line-height: 18px;
-    text-shadow: 0px 4px 3px #${colors.BLACK},
-                 0px 8px 13px #${colors.BLACK},
-                 0px 18px 23px #${colors.BLACK};
+    line-height: 1.125rem;
+    text-shadow: 0 0.25rem 0.1875rem #${colors.BLACK},
+                 0 0.5rem 0.8125rem #${colors.BLACK},
+                 0 1.125rem 1.4375rem #${colors.BLACK};
   }
 `;
 
 export const Movie = styled.div`
-  width: 225px;
-  margin-right: 10px;
-  margin-bottom: 35px;
+  width: 14.0625rem;
+  margin-right: 0.625rem;
+  margin-bottom: 2.1875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,27 +81,28 @@ export const Movie = styled.div`
     }
 
     div {
+      height: 25%;
+      width: 100%;
+      position: absolute;
+      bottom: 3.125rem;
+      left: 0;
+      box-shadow: inset -0.875rem -3.3125rem 0.8125rem 0.1875rem rgba(0, 0, 0, 0.5);
+      padding: 0.3125rem;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      bottom: 50px;
-      left: 0px;
-      box-shadow: 0 3px 8px ${colors.BLACK});
-      padding: 5px;
 
       span {
         padding: 0.35rem 0.5rem;
         background-color: ${colors.ORANGE};
-        border: 1px solid ${colors.BLACK};
         text-transform: uppercase;
         color: ${colors.GREY};
-        width: 60px;
-        font-size: 12px;
+        width: 3.75rem;
+        font-size: 0.75rem;
         text-align: center;
-        margin-top: 5px;
+        margin-top: 0.3125rem;
+        margin-left: 0.3125rem;
       }
     }
   }

@@ -20,11 +20,10 @@ const Header: React.FC<IProps> = ({ setLocation, setSearch }) => {
         <Filters>
           <div> 
             <FontAwesomeIcon icon={faSearch} className="icon" />
-            <input type="text" placeholder="busca" onChange={event => setSearch(event.target.value)} />
+            <input type="text" placeholder="busca..." onChange={event => setSearch(event.target.value)} />
           </div>
           <div>
             <select defaultValue="São Paulo" onChange={handleChange} className="location">
-              <option value="">Localidade...</option>
               <option>São Paulo</option>
               <option>Rio de Janeiro</option>
             </select>

@@ -27,7 +27,7 @@ const MovieContainer: React.FC<IProps> = ({ results, selectedLocation }) => {
             >
               <Movie>
                 <div>
-                  <img src={result.images[0].url} alt="poster"></img>
+                  <img src={result.images[0].url}></img>
                   <div>
                     {result.completeTags.map((tag: ITags) => (
                       <span key={tag.name}>{tag.name}</span>
